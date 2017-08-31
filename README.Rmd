@@ -8,15 +8,6 @@ output: github_document
 Document created by<br><a href="http://mikewk.com">Michael W. Kearney</a>, Assistant Professor<br>Journalism Studies | Data Science & Analytics<br>School of Journalism | Informatics Institute<br>University of Missouri
 </p>
 
-<style>
-p.myauthor a {
-color: #777 !important;
-}
-p.myauthor {
-color: #777 !important;
-}
-</style>
-
 ## Summary
 
 The goal of this tutorial is to provide a replicable example of how to gather
@@ -166,14 +157,8 @@ inaug45 <- gsub("\\s{2,}", " ", inaug45)
 Analyze the sentiment of the text using `analyse_sentiment()` from the
 googleapis package.
 
-```{r, eval=FALSE}
+```{r}
 sa <- analyze_sentiment(inaug45)
-```
-
-```{r, include=FALSE}
-##saveRDS(inaug45, "data/inaug45")
-##saveRDS(sa, "~/r/inaug45-sa.rds")
-sa <- readRDS("~/r/inaug45-sa.rds")
 ```
 
 Convert the returned object into a tidy tbl (data frame).
@@ -230,3 +215,4 @@ inaug45[55:58]
 ```
 
 
+<style>p.myauthor a {color: #777 !important;} p.myauthor {color: #777 !important;}</style>

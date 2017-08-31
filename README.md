@@ -5,6 +5,7 @@ Collecting, cleaning, and analyzing text in R
 <p class="myauthor" align="right" style="color: #777 !important;">
 Document created by<br><a style="color: #777 !important;" href="http://mikewk.com">Michael W. Kearney</a>, Assistant Professor<br>Journalism Studies | Data Science & Analytics<br>School of Journalism | Informatics Institute<br>University of Missouri
 </p>
+
 Summary
 -------
 

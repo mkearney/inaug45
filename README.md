@@ -2,8 +2,8 @@
 Collecting, cleaning, and analyzing text in R
 =============================================
 
-<p class="myauthor" align="right">
-Document created by<br><a href="http://mikewk.com">Michael W. Kearney</a>, Assistant Professor<br>Journalism Studies | Data Science & Analytics<br>School of Journalism | Informatics Institute<br>University of Missouri
+<p class="myauthor" align="right" style="color: #777 !important;">
+Document created by<br><a style="color: #777 !important;" href="http://mikewk.com">Michael W. Kearney</a>, Assistant Professor<br>Journalism Studies | Data Science & Analytics<br>School of Journalism | Informatics Institute<br>University of Missouri
 </p>
 Summary
 -------
@@ -29,32 +29,16 @@ if (any(!"devtools" %in% installed.packages())) {
   install.packages("devtools")
 }
 devtools::install_github("mkearney/googleapis")
-```
-
-    ## Downloading GitHub repo mkearney/googleapis@master
-    ## from URL https://api.github.com/repos/mkearney/googleapis/zipball/master
-
-    ## Installing googleapis
-
-    ## '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
-    ##   --no-environ --no-save --no-restore --quiet CMD INSTALL  \
-    ##   '/private/var/folders/8r/hld4q1j94w7_01g81s7060yd322dmk/T/Rtmp21d9or/devtools8f4b5ca75dbb/mkearney-googleapis-b802cb7'  \
-    ##   --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-    ##   --install-tests
-
-    ## 
-
-``` r
 library(googleapis)
 ```
 
 The [tidyverse](https://tidyverse.org) packages will be used to wrangle and visualize the data.
 
 ``` r
-if (any(!"rvest" %in% installed.packages())) {
-  install.packages("rvest")
+if (any(!"tidyverse" %in% installed.packages())) {
+  install.packages("tidyverse")
 }
-suppressPackageStartupMessages(library(rvest))
+suppressPackageStartupMessages(library(tidyverse))
 ```
 
 Web scraping
@@ -205,7 +189,7 @@ d %>%
   geom_point()
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-17-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-18-1.png)
 
 Apply smoothing method.
 
@@ -217,7 +201,7 @@ d %>%
   geom_smooth(method = "loess", span = .15)
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-18-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-19-1.png)
 
 The most negative paragraphs appear to be 30-33(ish).
 
@@ -240,5 +224,3 @@ inaug45[55:58]
     ## [2] "We will be protected by the great men and women of our military and law enforcement and, most importantly, we are protected by God."
     ## [3] "Finally, we must think big and dream even bigger."                                                                                  
     ## [4] "In America, we understand that a nation is only living as long as it is striving."
-
-<style>p.myauthor a {color: #777 !important;} p.myauthor {color: #777 !important;}</style>

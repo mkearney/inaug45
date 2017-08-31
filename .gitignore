@@ -1,1 +1,5 @@
-^README.Rmd$
+.Rproj
+.Rprofile
+.Rproj.user
+README_cache
+README.html
